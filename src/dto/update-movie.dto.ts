@@ -1,6 +1,3 @@
-import { IsString, IsNumber } from "class-validator";
-
-
-export class UpdateMovieDto extends PartialType() {
-    
-}
+import { PartialType } from "@nestjs/mapped-types";
+import { CreateMovieDto } from "./create-movie.dto";
+export class UpdateMovieDto extends PartialType(CreateMovieDto) {}
